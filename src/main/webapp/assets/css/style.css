@@ -91,6 +91,10 @@ label {
 	width: 11.1em;
 }
 
+.label-connection {
+	width: 5.6em;
+}
+
 input:not([type=submit]) {
 	width: 16em;
 }
