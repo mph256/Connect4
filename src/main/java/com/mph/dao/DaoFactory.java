@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import com.mph.util.Util;
 
 import com.mph.dao.interfaces.RegistrationDao;
+import com.mph.dao.interfaces.ConnectionDao;
 import com.mph.dao.interfaces.DisconnectionDao;
 
 public final class DaoFactory {
@@ -36,6 +37,10 @@ public final class DaoFactory {
 
 	public RegistrationDao getRegistrationDao() {
 		return new RegistrationDaoImpl(this);
+	}
+
+	public ConnectionDao getConnectionDao() {
+		return new ConnectionDaoImpl(this);
 	}
 
 	public DisconnectionDao getDisconnectionDao() {
