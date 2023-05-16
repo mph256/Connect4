@@ -1,6 +1,6 @@
 <main>
 	<section id="form-registration">
-		<form method="post" action="">
+		<form method="post" action="registration">
 			<p>
 				<label for="login" class="label-registration">Login: </label>
 				<input type="text" id="login" name="login" autofocus>
