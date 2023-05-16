@@ -55,6 +55,70 @@ a:hover {
 	color: #48c9b0;
 }
 
+main {
+	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	justify-content: center;
+	margin-top: 2em;
+}
+
+section {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+form {
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+form > p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+label {
+	text-align: right;
+	margin-right: .5em;
+}
+
+.label-registration {
+	width: 11.1em;
+}
+
+input:not([type=submit]) {
+	width: 16em;
+}
+
+input:not([type=submit]):focus {
+	outline: none !important;
+	border: 2px #5dade2 solid;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+input[type=submit] {
+	width: 5em;
+	color: #fdfefe;
+	background-color: #5dade2;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+	padding: .5em;
+}
+
+input[type=submit]:hover {
+	background-color: #48c9b0;
+}
+
+.error {
+	color: #e74c3c;
+}
+
 footer {
 	display: flex;
 	flex-wrap: wrap;
