@@ -1,6 +1,6 @@
 <main>
 	<section id="form-connection">
-		<form method="post" action="">
+		<form method="post" action="connection">
 			<p>
 				<label for="login" class="label-connection">Login: </label>
 				<input type="text" name="login" id="login" autofocus>

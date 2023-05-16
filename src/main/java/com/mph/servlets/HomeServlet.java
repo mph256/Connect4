@@ -22,7 +22,7 @@ public class HomeServlet extends HttpServlet {
 		String login = (String) session.getAttribute("login");
 
 		if(login == null)
-			response.sendRedirect(request.getContextPath() + "/registration");
+			response.sendRedirect(request.getContextPath() + "/connection");
 		else
 			this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/home.jsp").forward(request, response);
 
