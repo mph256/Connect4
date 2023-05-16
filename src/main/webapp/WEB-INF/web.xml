@@ -4,4 +4,13 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
     xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
     xmlns:my="http://jakarta.apache.org/tomcat/jsp2-example-taglib">
+
+    <listener>
+        <listener-class>com.mph.listeners.SessionListener</listener-class>
+    </listener>
+
+    <session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
 </web-app>
