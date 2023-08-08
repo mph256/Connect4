@@ -1,0 +1,10 @@
+* text=auto
+
+*.java whitespace=space-before-tab,tab-in-indent,trailing-space,tabwidth=4
+*.jsp whitespace=space-before-tab,tab-in-indent,trailing-space,tabwidth=4
+*.xml whitespace=space-before-tab,tab-in-indent,trailing-space,tabwidth=4
+*.html whitespace=space-before-tab,tab-in-indent,trailing-space,tabwidth=4
+*.css whitespace=space-before-tab,tab-in-indent,trailing-space,tabwidth=4
+*.js whitespace=space-before-tab,tab-in-indent,trailing-space,tabwidth=4
+
+*.png binary

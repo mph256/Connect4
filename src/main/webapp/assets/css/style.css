@@ -1,0 +1,773 @@
+@charset "UTF-8";
+
+body {
+	display: flex;
+	flex-direction: column;
+	margin: 0 0 2em 0;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: linear-gradient(90deg, #5dade2, #48c9b0);
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #d6dbdf;
+	position: relative;
+}
+
+main {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	position: relative;
+	margin: 2em;
+}
+
+footer {
+	height: 2em;
+	background-color:#f2f3f4;
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+#section-registration, #section-connection,
+#section-menu, #section-scores, 
+#section-profile, #section-users {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#section-game {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+#section-requests-friend, #section-requests-game {
+	display: none;
+	width: 17.5em;
+	border: 1px solid #000000;
+	margin-top: -2em;
+	margin-right: -2em;
+}
+
+#section-requests-friend {
+	position: absolute;
+	top: 0;
+	right: 9.8em;
+	z-index: 1;
+}
+
+#section-requests-game {
+	position: absolute;
+	top: 0;
+	right: 6.6em;
+	z-index: 1;
+}
+
+#section-friends-online {
+	width: 16.5em;
+	border: 1px solid #000000;
+	position: fixed;
+	right: 0;
+	bottom: 2em;
+	z-index: 1;
+}
+
+#section-alert, #section-confirm {
+	display: none;
+	width: 30em;
+	height: 17em;
+	background-color: #A6ACAF;
+	border: 1px solid #000000;
+	text-align: center;
+	position: fixed;
+	z-index: 2;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 500;
+	font-family: 'Titan One', cursive;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	color: #fdfefe;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 0;
+}
+
+h2, caption {
+	font-size: 1.3em;
+	margin-bottom: 1em;
+}
+
+h2, caption, th {
+	font-family: 'Cuprum', sans-serif;
+}
+
+th:not(th a) {
+	font-size: 1.1em;
+	font-weight: 500;
+}
+
+#section-profile caption {
+	margin-top: 1em;
+}
+
+#section-requests-friend h2, #section-requests-game h2, 
+#section-friends-online h2 {
+	font-size: 1.1em;
+	font-weight: 500;
+	margin-top: 0;
+    margin-right: 0.5em;
+	margin-bottom: 0;
+}
+
+p, td, th a, label, input, button {
+	font-size: 1em;
+	font-family: 'Truculenta', sans-serif;
+}
+
+.icon-friends {
+	position: absolute;
+	left: 0.5em;
+}
+
+#section-registration form > p,
+#section-connection form > p,
+#section-profile form > p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+#section-requests-friend form > p,
+#section-requests-game form > p,
+#section-friends-online form > p {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: 0.5em;
+}
+
+footer p {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	font-size: .7em;
+	opacity: .5;
+}
+
+.search-request-friend, .search-request-game,
+.search-friend-online {
+	background-color: #ecf0f1;
+	text-align: center;
+	border-bottom: 1px solid #000000;
+	margin-top: 0;
+	padding: 0.5em;
+}
+
+#section-game div:first-of-type,
+#section-game div:last-of-type 
+{
+	flex: 1 1 33%;
+	width: 11em;
+	height: 11em;
+	text-align: center;
+	background-color: #ecf0f1;
+	border: 1px solid #000000;
+	border-radius: 15px;
+}
+
+#section-game div:first-of-type {
+	position: absolute;
+	left: 0;
+}
+
+#section-game div:last-of-type {
+	position: absolute;
+	right: 0;
+}
+
+#section-menu ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+#section-menu li {
+	font-family: 'Titan One', cursive;
+	text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+	width: 37.5em;
+	text-align: center;
+	background-color: #ceeeed;
+	border: 1px solid #000000;
+	border-radius: 15px;
+	padding: 1em;
+	margin-bottom: .5em;
+}
+
+#section-menu li:hover {
+	border: 2px #f39c12 solid;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+header img {
+	width: 2.5em;
+	height: auto;
+	margin-left: 1em;
+}
+
+nav img {
+	width: 2em; 
+	height: 2em;
+	border: 1px solid #000000;
+	border-radius: 50%;
+	position: absolute;
+	right: 3em;
+	bottom: -0.4em;
+}
+
+#section-requests-friend img,
+#section-requests-game img,
+#section-friends-online img,
+#section-games tbody img, 
+#section-scores tbody img,
+#section-profile tbody img, 
+#section-users tbody img {
+	width: 2em;
+	height: 2em;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+#section-games tbody img,
+#section-scores tbody img,
+#section-profile tbody img, 
+#section-users tbody img {
+	margin-right: .5em;
+}
+
+#section-game img {
+	width: 4em;
+	height: 4em;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+#section-profile div img {
+	max-width: 8em; 
+	height: auto;
+	border: 1px solid #000000;
+	border-radius: 50%;
+	margin-bottom: 2em;
+}
+
+a {
+	color: #5dade2;
+}
+
+a:hover {
+	color: #48c9b0;
+}
+
+#section-menu li a {
+	font-size: 1.2em;
+	text-decoration: none;
+	color: #fdfefe;
+}
+
+a > i {
+	text-decoration: none;
+	color: #000000; 
+}
+
+nav i:last-of-type {
+	margin-top: .1em;
+	margin-right: .5em;
+}
+
+.requests-game-show i {
+	vertical-align: -.1em;
+}
+
+#section-requests-friend i, #section-requests-game i {
+	margin-top: .5em;
+}
+
+#section-friends-online i {
+	margin-top: 0;
+}
+
+.icon-home {
+	position: absolute;
+	left: .5em;
+}
+
+.requests-friend-show {
+	position: absolute;
+	right: 9em;	
+}
+
+.requests-game-show {
+	position: absolute;
+	right: 6em;
+}
+
+.requests-friend-hide, .requests-game-hide {
+	position: absolute;
+	right: .1em;
+}
+
+.friends-online-hide {
+	display: none;
+	position: absolute;
+	left: 15.5em;
+}
+
+.counter-requests-friend {
+	position: absolute;
+	top: -.7em;
+	left: 1.1em;
+}
+
+.counter-requests-game {
+	position: absolute;
+	top: -.7em;
+	left: 1.3em;
+}
+
+.counter-requests {
+	font-size: .7em;
+	color: #ffffff;
+	background-color: #e74c3c;
+	border-radius: 15px;
+	padding: .3em;
+}
+
+.counter-friends {
+	font-size: .9em;
+	font-weight: 500;
+	margin-bottom: .9em;
+}
+
+#section-registration form,
+#section-connection form,
+#section-profile form {
+	width: 37.5em;
+	background-color: #ecf0f1;
+	border: 1px solid #000000;
+	border-radius: 15px;
+	padding: 1em;
+}
+
+.error {
+	color: #e74c3c;
+}
+
+#section-connection .error {
+	margin-top: 0;
+}
+
+form label {
+	text-align: right;
+	margin-right: .5em;
+}
+
+.label-registration {
+	width: 10em;
+}
+
+.label-connection {
+	width: 5.1em;
+}
+
+.label-profile {
+	width: 7.2em;
+}
+
+form input {
+	width: 15em;
+}
+
+#section-requests-friend input[type=search], #section-requests-game input[type=search] {
+	width: 15.9em;
+}
+
+#section-friends-online input[type=search] {
+	width: 14.9em;
+}
+
+#section-games th input[type=search] {
+	width: 6.9em;
+}
+
+#section-scores th input[type=search] {
+	width: 11em;
+}
+
+#section-profile th input[type=search] {
+	width: 11.3em;
+}
+
+ #section-users th input[type=search] {
+ 	width: 17.2em;
+ }
+
+ form input[type=date], form input[type=datetime-local] {
+ 	font-size: .9em;
+ 	padding-top: .2em;
+	padding-right: 1.5em;
+ }
+ 
+ form input[type=file] {
+ 	width: 15.9em;
+	font-size: .9em;
+	margin-right: 4.1em;
+}
+
+input[type=search], form input:not([type=file]) {
+	height: 1.5em;
+}
+
+#section-registration form input:not(.input-password),
+#section-connection form input:not(.input-password),
+#section-profile form input:not(.input-password, input[type=file]) {
+	margin-right: 2.5em;
+}
+
+input:not([type=file]):focus {
+	outline: none !important;
+	border: 2px #5dade2 solid;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+#section-requests-friend input:not([type=search]), #section-requests-game input:not([type=search]),
+#section-friends-online input:not([type=search]) {
+	width: 4em;
+	margin-left: 0.5em;
+}
+
+#section-requests-friend input:not([type=search]), #section-requests-game input:not([type=search]),
+#section-friends-online input:not([type=search]) ,
+.input-profile, 
+#section-profile td input, #section-users td input {
+	color: #000000;
+	border: none;
+}
+
+.input-profile {
+	width: 8.9em;
+}
+
+.input-profile:disabled {
+ 	background-color: #ecf0f1;
+ }
+
+#section-profile td input:not(#section-profile td:first-of-type input), 
+#section-users td input:not(#section-users td:first-of-type input) {
+	text-align: center;
+}
+
+#section-profile td:first-of-type,
+#section-users td:first-of-type {
+	text-align: center;
+}
+
+td input {
+	width: 5.5em;
+}
+
+button {
+	color: #fdfefe;
+	background-color: #5dade2;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+	background-color: #48c9b0;
+}
+
+.btn-show-password {
+	width: 2em;
+	margin-left: .5em;
+}
+
+.btn-delete, .btn-remove, .btn-cancel, .btn-decline {
+	background-color: #e74c3c;
+}
+
+.btn-previous {
+	background-color: #f39c12;
+}
+
+.btn-delete:hover, .btn-remove:hover, .btn-cancel:hover, .btn-decline:hover {
+	background-color: #cb4335;
+}
+
+.btn-previous:hover {
+	background-color:#d68910;
+}
+
+#section-game .btn-send-request-friend,
+.btn-previous,
+.btn-decline-request-friend,
+.btn-decline-request-game,
+.btn-delete-account {
+	margin-left: .5em;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+#section-games table {
+	table-layout: fixed;
+	width: 49.5em;
+}
+
+#section-scores table {
+	table-layout: fixed;
+	width: 89.5em;
+}
+
+#section-profile table, #section-users table {
+	table-layout: fixed;
+	width: 39.5em;
+}
+
+.tr-user {
+	background-color: #fdf7f1;
+}
+
+th, td {
+	text-align: center;
+	border-bottom: 1px solid #000000;
+	padding: .3em;
+}
+
+th {
+	border-top: 1px solid #000000;
+}
+
+th:not(#section-game th) {
+	background-color: #ecf0f1;
+}
+
+th:first-child, td:first-child {
+	border-left: 1px solid #000000;
+}
+
+th:last-child, td:last-child {
+	border-right: 1px solid #000000;
+}
+
+#section-games th:last-child, 
+#section-users th:last-child {
+	display:none;
+}
+
+#section-profile th:nth-child(3) {
+	background-color: #fdfefe;
+	border-top: none;
+	border-right: none;
+	border-bottom: none;
+}
+
+#section-games th:nth-child(5), 
+#section-profile th:nth-child(2), 
+#section-users th:first-child {
+	border-right: 1px solid #000000;
+}
+
+#section-games td:last-child, 
+#section-profile td:last-child, 
+#section-users td:last-child {
+	border-top: 1px solid #000000;
+}
+
+#section-game th {
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+tbody td span {
+    display: inline-block;
+    width: 4em;
+    text-align: left;
+}
+
+#section-game td:first-child {
+	border-left: none;
+}
+
+#section-game td:last-child {
+	border-right: none;
+}
+
+.th-rotate-right, .th-rotate-left,
+.td-rotate-right, .td-rotate-left  {
+	border-bottom: none;
+}
+
+#section-game td:not(.td-rotate-right, .td-rotate-left) {
+	width: 3.5em;
+	height: 3.5em;
+	background-color: #318ce7;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #000000;
+}
+
+.state {
+	width: 10em;
+	font-size: 1.5em;
+	text-align: center;
+	background-color: #ecf0f1;
+	border: 1px solid #000000;
+	border-radius: 15px;
+    margin-top: 0;
+    margin-bottom: 1em;
+   	padding: .5em;
+}
+
+#state {
+	font-weight: 600;
+}
+
+.player-1, .player-2 {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.player-1 {
+	color: #e74c3c;
+}
+
+.player-2 {
+	color: #fdda0d;
+}
+
+#player-1 {
+	margin-left: .5em;
+}
+
+#player-2 {
+	margin-right: .5em;
+}
+
+.turn {
+	flex: 1 1 100%;
+	font-size: 1.2em;
+	text-align: center;
+	margin-top: 2em;
+}
+
+.timer {
+	flex: 1 1 100%;
+	text-align: center;
+	margin-top: 0;
+	margin-bottom: 2em;
+}
+
+.winner {
+	flex: 1 1 100%;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 0;
+}
+
+#winner {
+	font-weight: 600;
+}
+
+.token-red, .token-yellow, .token-none {
+	display: inline-block;
+	width: 3em;
+	height: 3em;
+	border: 1px solid #000000;
+	border-radius: 50%;
+}
+
+.token-red {
+	background-color: #e74c3c;
+}
+
+.token-yellow {
+	background-color: #fdda0d;
+}
+
+.token-none {
+	background-color: #fdfefe;
+}
+
+.page-current,
+.requests-friend-page-current,
+.requests-game-page-current,
+.friends-online-page-current {
+	font-weight: 700;
+	cursor: not-allowed;
+}
+
+.page-disabled,
+.requests-friend-page-disabled,
+.requests-game-page-disabled,
+.friends-online-page-disabled {
+	cursor: not-allowed;
+	opacity: .5;
+}
+
+.page-first:hover, .page-target:hover, .page-last:hover,
+.requests-friend-page-first:hover, .requests-friend-page-target:hover, .requests-friend-page-last:hover,
+.requests-game-page-first:hover, .requests-game-page-target:hover, .requests-game-page-last:hover,
+.friends-online-page-first:hover, .friends-online-page-target:hover, .friends-online-page-last:hover {
+	cursor: pointer;
+}
+
+.filter-scores {
+	align-self: end;
+}
+
+.requests-friend-header, .requests-game-header, .friends-online-header {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	background-color: #d6eaf8;
+	position: relative;
+}
+
+.requests-friend-body, .requests-game-body, .friends-online-body {
+	height: 16em;
+	background-color: #fdfefe;
+	border-top: 1px solid #000000;
+	overflow: scroll;
+}
+
+.friends-online-body {
+	display: none;
+}
+
+.hide {
+	display: none;
+}
+
+.center {
+	justify-content: center;
+}
